@@ -1,0 +1,125 @@
+/* base */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* block */
+.square * {
+  width: 100px;
+  height: 100px;
+}
+
+/* element */
+.square__tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid transparent;
+  border-bottom-right-radius: 0%;
+  background-color: lightcoral;
+  animation: move-square-tl 4s ease-in-out forwards;
+}
+
+.square__tl:hover {
+  border: 2px solid white;
+}
+
+.square__tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 2px solid transparent;
+  background-color: lightblue;
+  border-bottom-left-radius: 0%;
+  animation: move-square-tr 4s ease-in-out forwards;
+}
+
+.square__tr:hover {
+  border: 2px solid white;
+}
+
+.square__br {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 2px solid transparent;
+  background-color: lightgoldenrodyellow;
+  border-top-left-radius: 0%;
+  animation: move-square-br 4s ease-in-out forwards;
+}
+
+.square__br:hover {
+  border: 2px solid white;
+}
+
+.square__bl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 2px solid transparent;
+  background-color: lightgreen;
+  border-top-right-radius: 0%;
+  animation: move-square-bl 4s ease-in-out forwards;
+}
+
+.square__bl:hover {
+  border: 2px solid white;
+}
+
+/* animation */
+@keyframes move-square-tl {
+  from {
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 0%;
+  }
+  to {
+    top: 50%;
+    left: 50%;
+    border-bottom-right-radius: 100%;
+    background-color: black;
+  }
+}
+
+@keyframes move-square-tr {
+  from {
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 0%;
+  }
+  to {
+    top: 50%;
+    right: 50%;
+    border-bottom-left-radius: 100%;
+    background-color: black;
+  }
+}
+
+@keyframes move-square-br {
+  from {
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 0%;
+  }
+  to {
+    bottom: 50%;
+    right: 50%;
+    border-top-left-radius: 100%;
+    background-color: black;
+  }
+}
+
+@keyframes move-square-bl {
+  from {
+    bottom: 0;
+    left: 0;
+    border-top-right-radius: 0%;
+  }
+  to {
+    bottom: 50%;
+    left: 50%;
+    border-top-right-radius: 100%;
+    background-color: black;
+  }
+}
